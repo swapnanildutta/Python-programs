@@ -1,0 +1,15 @@
+fname = input('Enter file name: ')
+fhand = open(fname)
+counts = dict()
+temp = list()
+for line in fhand: #read each line
+    words = line.split() #list of words in line
+    for word in words:
+        counts[word] = counts.get(word,0) + 1
+bigword = None
+bigcount = 0
+for k,v in counts.items():
+    if v > bigcount:
+        bigcount = v
+        bigword = k
+print(bigword, bigcount)
