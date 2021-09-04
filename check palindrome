@@ -1,0 +1,8 @@
+str = 'aIbohPhoBiA'
+str = str.casefold()
+revstr = reversed(str)
+# check if the string is equal to its reverse
+if list(str) == list(revstr):
+   print("The string is a palindrome.")
+else:
+   print("The string is not a palindrome.")
